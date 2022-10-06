@@ -3,7 +3,7 @@ import TeamForm from "./TeamForm";
 function TeamDetailButtons(props) {
     return (
         <div className="flex justify-between w-full">
-            <button className="bg-red-500 text-white">
+            <button className="bg-red-500 text-white" onClick={props.handleDeleteClick}>
                 Delete
             </button>
             <button className="bg-blue-500 text-white" onClick={() => props.setShowForm(true)}>

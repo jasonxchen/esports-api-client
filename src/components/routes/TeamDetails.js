@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import TeamDetailButtons from "../partials/TeamDetailButtons";
 
 function TeamDetails() {
+    const navigate = useNavigate();
     const {teamId} = useParams();
     const [team, setTeam] = useState({});
     const [showForm, setShowForm] = useState(false);
@@ -30,6 +31,18 @@ function TeamDetails() {
             }
         }
     }
+    const handleDeleteClick = async () => {
+        try {
+            await axios.delete(`${process.env.REACT_APP_SERVER_URL}/teams/${team._id}`);
+            navigate("/teams");
+        }
+        catch (error) {
+            console.log(error);
+            if (error.response) {
+                setErrorMsg(error.response.data.message);
+            }
+        }
+    }
     return (
         <div className="flex flex-col items-center w-6/12">
             <p>{errorMsg}</p>
@@ -43,6 +56,7 @@ function TeamDetails() {
                 team={team} 
                 setTeam={setTeam} 
                 handleFormSubmit={handleFormSubmit}
+                handleDeleteClick={handleDeleteClick}
             />
         </div>
     );
