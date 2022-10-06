@@ -30,8 +30,8 @@ function Teams() {
         );
     });
     return (
-        <div>
-            <h1>Esports Teams</h1>
+        <div className="flex flex-col items-center w-6/12">
+            <h1 className="text-4xl">Esports Teams</h1>
             <CreateTeamButton />
             <p>{errorMsg}</p>
             {teamCardComponents}

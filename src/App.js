@@ -7,7 +7,7 @@ import TeamDetails from './components/routes/TeamDetails';
 
 function App() {
   return (
-    <div className="App">
+    <div className="mt-3 mb-5 flex flex-col items-center">
       <Router>
         <Navbar />
         <Routes>

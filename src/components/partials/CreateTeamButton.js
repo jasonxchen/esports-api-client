@@ -8,8 +8,8 @@ function CreateTeamButton() {
         }
     }
     return (
-        <div>
-            <button onClick={handleNewClick}>
+        <div className="self-end">
+            <button className="bg-green-500 text-white" onClick={handleNewClick}>
                 New
             </button>
         </div>

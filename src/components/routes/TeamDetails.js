@@ -15,8 +15,8 @@ function TeamDetails() {
         getTeam();
     }, []);
     return (
-        <div>
-            <h2>{team.name}</h2>
+        <div className="flex flex-col items-center w-6/12">
+            <h2 className="text-2xl">{team.name}</h2>
             <p>Created on: {team.createdOn}</p>
             <p>Region: {team.region}</p>
             <p>Winnings: ${team.winnings}</p>
