@@ -36,6 +36,7 @@ function CreateTeamButton() {
                     form={form} 
                     setForm={setForm} 
                     handleFormSubmit={handleFormSubmit}
+                    action="create"
                 /> 
                 : 
                 null
