@@ -45,7 +45,7 @@ function TeamDetails() {
     }
     return (
         <div className="flex flex-col items-center w-6/12">
-            <p>{errorMsg}</p>
+            <p className="text-red-500">{errorMsg}</p>
             <h2 className="text-2xl">{team.name}</h2>
             <p>Created on: {team.createdOn}</p>
             <p>Region: {team.region}</p>

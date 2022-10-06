@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import CreateTeamButton from "../partials/CreateTeamButton";
-import TeamCard from "../partials/TeamCard";
+import TeamList from "../partials/TeamList";
 
 function Teams() {
     const navigate = useNavigate();
@@ -44,14 +44,6 @@ function Teams() {
             }
         }
     }
-    const teamCardComponents = teams.map(team => {
-        return (
-            <TeamCard 
-                key={team._id}
-                team={team}
-            />
-        );
-    });
     return (
         <div className="flex flex-col items-center w-6/12">
             <h1 className="text-4xl">Esports Teams</h1>
@@ -62,8 +54,8 @@ function Teams() {
                 setTeam={setNewTeam}
                 handleFormSubmit={handleFormSubmit}
             />
-            <p>{errorMsg}</p>
-            {teamCardComponents}
+            <p className="text-red-500">{errorMsg}</p>
+            <TeamList teams={teams} />
         </div>
     );
 }

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav>
-            <Link to="/">Home</Link>{" | "}
-            <Link to="/teams">Teams</Link>
+            <Link to="/" className="hover:text-gray-500">Home</Link>{" | "}
+            <Link to="/teams" className="hover:text-gray-500">Teams</Link>
         </nav>
     );
 }
