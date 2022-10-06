@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import CreateTeamButton from "../partials/CreateTeamButton";
 import TeamCard from "../partials/TeamCard";
 
 function Teams() {
@@ -31,6 +32,7 @@ function Teams() {
     return (
         <div>
             <h1>Esports Teams</h1>
+            <CreateTeamButton />
             <p>{errorMsg}</p>
             {teamCardComponents}
         </div>
