@@ -12,8 +12,8 @@ function TeamDetailButtons(props) {
             {props.showForm ? 
                 <TeamForm 
                     setShowForm={props.setShowForm} 
-                    form={props.team} 
-                    setForm={props.setTeam} 
+                    team={props.team} 
+                    setTeam={props.setTeam} 
                     handleFormSubmit={props.handleFormSubmit}
                     action="update"
                 /> 

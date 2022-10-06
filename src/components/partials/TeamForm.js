@@ -15,29 +15,29 @@ function TeamForm(props) {
                     </button>
                     {/* Form */}
                     <div className="py-6 px-6 lg:px-8">
-                        <form className="space-y-6" onSubmit={e => props.handleFormSubmit(e, props.form)}>
+                        <form className="space-y-6" onSubmit={e => props.handleFormSubmit(e, props.team)}>
                             <div>
                                 <label htmlFor="name-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
                                 <input type="text" id="name-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required 
-                                    value={props.form.name} onChange={e => props.setForm({ ...props.form, name: e.target.value })}
+                                    value={props.team.name} onChange={e => props.setTeam({ ...props.team, name: e.target.value })}
                                 />
                             </div>
                             <div>
                                 <label htmlFor="created-on-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Created On</label>
                                 <input type="date" id="created-on-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required 
-                                    value={props.form.createdOn} onChange={e => props.setForm({ ...props.form, createdOn: e.target.value })}
+                                    value={props.team.createdOn} onChange={e => props.setTeam({ ...props.team, createdOn: e.target.value })}
                                 />
                             </div>
                             <div>
                                 <label htmlFor="region-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Region</label>
                                 <input type="text" id="region-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required 
-                                    value={props.form.region} onChange={e => props.setForm({ ...props.form, region: e.target.value })}
+                                    value={props.team.region} onChange={e => props.setTeam({ ...props.team, region: e.target.value })}
                                 />
                             </div>
                             <div>
                                 <label htmlFor="winnings-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Winnings</label>
                                 <input type="number" id="winnings-input" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required 
-                                    value={props.form.winnings} onChange={e => props.setForm({ ...props.form, winnings: e.target.value })}
+                                    value={props.team.winnings} onChange={e => props.setTeam({ ...props.team, winnings: e.target.value })}
                                 />
                             </div>
                             <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

@@ -16,7 +16,7 @@ function TeamDetails() {
             setTeam(response.data);
         }
         getTeam();
-    }, []);
+    }, [teamId]);
     const handleFormSubmit = async (e, updatedTeam) => {
         try {
             e.preventDefault();
